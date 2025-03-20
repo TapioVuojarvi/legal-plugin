@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "legal_assistant",
+  "name_for_human": "Lakilaajennus",
+  "description_for_model": "Plugin for retrieving legal texts, case law, and government proposals based on user queries.",
+  "description_for_human": "Tämä laajennus hakee ajantasaiset lakitekstit, oikeuskäytännöt ja hallituksen esitykset suoraan ChatGPT-keskusteluun.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://yourgithubusername.github.io/legal-plugin/openapi.json"
+  },
+  "logo_url": "https://yourgithubusername.github.io/legal-plugin/logo.png",
+  "contact_email": "support@yourdomain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
+}
