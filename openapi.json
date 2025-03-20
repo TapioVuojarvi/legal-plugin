@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Legal API",
+    "description": "API for retrieving legal texts from Finlex.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/laws/{statute_id}": {
+      "get": {
+        "summary": "Get consolidated legal text",
+        "parameters": [
+          {
+            "name": "statute_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Legal text retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statute_id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Statute not found"
+          }
+        }
+      }
+    }
+  }
+}
